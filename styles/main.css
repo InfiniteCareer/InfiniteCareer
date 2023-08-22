@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700');
+
+div, section, article, nav{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend';
+}
+
+img{
+    max-width: 15em;
+    max-height: 15em
+}
+
+h1{
+    font-size: 50px;
+    font-weight: 500;
+}
+p{
+    font-weight: 300;
+}
+
+nav ul{
+    padding: 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    gap: 5vw;
+
+    list-style: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a:visited,
+nav a:link{
+    color: #fc7272;
+    text-decoration: none;
+    border: none
+}
+
+nav a:hover{
+    border-bottom: #fc7272 solid 2px
+}
+
+section#title{
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+section#mission_statement{
+    display: flex;
+    background-color: #f3f3f3ff;
+    padding: 1em 4em;
+
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
+}
+
+#mission_statement p{
+    padding: 0em 5em
+}
+
+section#events{
+    display: flex;
+    flex-direction: column;
+}
+
+div.event{
+    display: flex;
+    padding: 1em;
+    margin: 1em 0em 0em 5vw;
+    gap: 5vw;
+}
+
+.imgwrap{
+    border: #fc7272 2em solid;
+    border-radius: 10%;
+}
+
+.textwrap{
+    border: lightgray 2em solid;
+    border-radius: 30px;
+    background-color: lightgray;
+}
