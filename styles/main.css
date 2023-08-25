@@ -59,9 +59,10 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 0vw 3vw;
+    position: relative;
 
     background-color: var(--gray);
-    box-shadow: 0px 1px 8px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -151,16 +152,57 @@ footer i{
     font-size: 30px;
     padding-right: 0.25em;
 }
+
+@media screen and (max-width: 600px){
+    footer{
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer > div{
+        max-width: 60%;
+    }
+}
 /* END OF FOOTER */
 
 /* GENERAL TITLE CSS */
 
 section.title{
-    text-align: center;
-    color: var(--primary-color);
+    text-align: left;
+    color: white;
+    background-color: var(--primary-color);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* THATS ALL????? YEA CUZ IM SO GOOD */
+section.title img{
+    width: 200px;
+    height: 200px;
+
+    background-color: white;
+    border: 15px solid white;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px){
+    section.title{
+        text-align: center;
+        flex-direction: column;
+    }
+
+    section.title div.img{
+        position: absolute;
+        bottom: 35vh;
+    }
+
+    section.title img{
+        width: 100px;
+        height: 100px;
+    }    
+}
 
 /* GENERAL CONTENT SLIDE */
 
@@ -174,6 +216,12 @@ div.events{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width: 600px){
+    div.events{
+        flex-direction: column;
+    }
 }
 
 /* Video events on the homepage */
