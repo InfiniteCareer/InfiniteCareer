@@ -4,6 +4,7 @@
 
     --gray: #f9fbfd;
     --primary-color: #fc7272;
+    --secondary-color: #fce5cdff;
 }
 
 html,body
@@ -14,11 +15,18 @@ html,body
     padding: 0px;
 }
 
-div, section, article, nav{
+div, section, article, nav, h1, h2, h3{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lexend';
+}
+
+section{
+    width: 100%;
+
+    min-height: 30vh;
+    padding: 10vh 10vw;
 }
 
 img{
@@ -28,10 +36,21 @@ img{
 
 h1{
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 400;
 }
+
+h2{
+    font-weight: 400;
+}
+
 p{
     font-weight: 300;
+    line-height: 2;
+}
+
+hr{
+    border: 3px solid var(--primary-color);
+    width: 40%;
 }
 
 /* START OF NAVIGATION BAR */
@@ -82,56 +101,92 @@ nav a:link{
     border: none
 }
 
-nav a:hover{
+nav a:not(:first-child):hover{
     border-bottom: var(--primary-color) solid 2px
+}
+
+nav a.bars{
+    display: none
+}
+
+@media screen and (max-width: 600px){
+    nav ul li:not(:first-child){
+        display: none
+    }
+    nav a.bars{
+        display: inline;
+    }
+
+    nav ul.active{
+        flex-direction: column;
+    }
+
+    nav ul.active li{
+        display: block;
+        text-align: center;
+    }
 }
 
 /* END OF NAVIGATION BAR */
 
-section#title{
+/* START OF FOOTER */
+
+footer{
     display: flex;
     width: 100%;
-    padding: 1em;
-    
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
+    justify-content: space-around;
+    min-height: 30vh;
+    padding: 5vh 0vw;
+
+    background-color: var(--primary-color);
+    color: white;
 }
 
-section#mission_statement{
-    display: flex;
-    background-color: #f3f3f3ff;
-    padding: 1em 4em;
+footer > div{
+    max-width: 40%;
+}
 
-    flex-direction: column;
-    justify-content: center;
+footer i{
+    color: white;
+    font-size: 30px;
+    padding-right: 0.25em;
+}
+/* END OF FOOTER */
 
+/* GENERAL TITLE CSS */
+
+section.title{
     text-align: center;
+    color: var(--primary-color);
 }
 
-#mission_statement p{
-    padding: 0em 5em
+/* THATS ALL????? YEA CUZ IM SO GOOD */
+
+/* GENERAL CONTENT SLIDE */
+
+section.secondary{
+    background-color: var(--secondary-color);
 }
 
-section#events{
+/* Wrapper for the articles and events */
+div.events{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-div.event{
-    display: flex;
-    padding: 1em;
-    margin: 1em 0em 0em 5vw;
-    gap: 5vw;
+/* Video events on the homepage */
+div.videoevent{
+    padding: 2vw;
 }
 
-.imgwrap{
-    border: #fc7272 2em solid;
-    border-radius: 10%;
+div.videoevent iframe{
+    width: 100%;
+    height: 30vh;
+    margin: auto;
+    margin: 1em 0em;
+
+    box-shadow: 0px 5px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
-.textwrap{
-    border: lightgray 2em solid;
-    border-radius: 30px;
-    background-color: lightgray;
-}

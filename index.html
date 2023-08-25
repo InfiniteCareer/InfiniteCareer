@@ -9,13 +9,22 @@
         <title>Infinite Career</title>
 
         <link rel="stylesheet" href="styles/main.css" />
+        <script
+            src="https://kit.fontawesome.com/7695485717.js"
+            crossorigin="anonymous"
+        ></script>
     </head>
     <body>
         <!-- Navigation Bar -->
         <nav>
             <p>Infinite Career</p>
 
-            <ul>
+            <ul id="nav-list" class="topnav">
+                <li>
+                    <a href="javascript:void(0);" class="bars">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </li>
                 <li><a href="#">Home</a></li>
                 <li><a href="videos.html">Videos</a></li>
                 <li><a href="blogs.html">Blogs</a></li>
@@ -24,10 +33,13 @@
         </nav>
 
         <main>
-            <section id="title">
-                <h1>Infinite Career</h1>
-                <img src="images/Ic_logo.png" alt="" />
+            <section id="title" class="title">
+                <h1>The Infinite Career Project</h1>
+                <p class="caption">Choose Your Path.</p>
+                <!-- <img src="images/Ic_logo.png" alt="" /> -->
             </section>
+
+            <!-- REMEMBER TO ADD SECONDARY CLASS TO MISSION STATEMENT SECTION -->
             <section id="mission_statement">
                 <h2>Mission Statement</h2>
                 <p>
@@ -41,21 +53,19 @@
                     vel animi, assumenda placeat possimus autem.
                 </p>
             </section>
-            <section id="events">
-                <div class="event">
-                    <div class="imgwrap">
-                        <a
-                            href="https://www.youtube.com/watch?v=nARNFuehcr0&ab_channel=InfiniteCareer"
-                        >
-                            <img
-                                src="https://i.ytimg.com/vi/nARNFuehcr0/sddefault.jpg"
-                                alt=""
-                                style="height: 100%"
-                            />
-                        </a>
-                    </div>
-                    <div class="textwrap">
-                        <h2>Career showcases</h2>
+
+            <section id="videopreview">
+                <h2 style="text-align: center">Recent Video Events</h2>
+                <div class="events">
+                    <div class="videoevent">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/nARNFuehcr0?si=6EpBOE2XXoHp40jq"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                        <h2>April Career Showcase!</h2>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Adipisci at veniam esse nam ipsa sapiente
@@ -64,21 +74,15 @@
                             distinctio saepe?
                         </p>
                     </div>
-                </div>
-                <div class="event">
-                    <div class="imgwrap">
-                        <a
-                            href="https://www.youtube.com/watch?v=nARNFuehcr0&ab_channel=InfiniteCareer"
-                        >
-                            <img
-                                src="https://i.ytimg.com/vi/nARNFuehcr0/sddefault.jpg"
-                                alt=""
-                                style="height: 100%"
-                            />
-                        </a>
-                    </div>
-                    <div class="textwrap">
-                        <h2>Career showcases</h2>
+                    <div class="videoevent">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/tIRBIOYT9bI?si=pNn2xg93gGd45kQW"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen
+                        ></iframe>
+                        <h2>February Career Showcase</h2>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Adipisci at veniam esse nam ipsa sapiente
@@ -89,8 +93,45 @@
                     </div>
                 </div>
             </section>
+            <hr />
+            <section id="blogpreview">
+                <h2 style="text-align: center">Recent Blogs</h2>
+                <div class="events"></div>
+            </section>
         </main>
 
-        <footer></footer>
+        <footer>
+            <div id="main">
+                <h1>The Infinite Career Project</h1>
+                <p class="caption">since 2020</p>
+            </div>
+            <div id="socials">
+                <p>infinitecareer.edu@gmail.com</p>
+                <p>@infinitecareer</p>
+                <div id="icons">
+                    <a
+                        href="https://www.instagram.com/infinitecareer/?hl=en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-instagram"></i
+                    ></a>
+
+                    <a
+                        href="https://www.linkedin.com/company/infinite-careeredu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+
+                    <a
+                        href="https://www.youtube.com/@infinitecareer7543"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><i class="fab fa-youtube"></i
+                    ></a>
+                </div>
+            </div>
+        </footer>
     </body>
+    <script src="navbar.js"></script>
 </html>
