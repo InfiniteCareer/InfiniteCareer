@@ -4,25 +4,9 @@ const articles = document.querySelectorAll('article.blog');
 // Add children with the respective classes and it should be set
 // First loop
 
-// let varb = fetch('./articles/ES-career-guide.html').then(r=>r.text()).then((html)=>{ // get the content of products.html
-//     let element = document.createElement("html");
-//     element.innerHTML = html; // parse the html
-//     let p1 = element.querySelector(".description");
-//     return p1
-//   });
-
-//   console.log(varb);
-
 createBlogPreviews();
 
 function createBlogPreviews() {
-    // for (article of articles){
-    //     getElements(article.id).then((dict)=>{
-    //         article = addElements(dict, article);
-    //         console.log(article);
-    //     });
-    // };
-
     articles.forEach((article)=>{getElements(article.id).then((dict)=>{
         article = addElements(dict, article);
         console.log(article);
