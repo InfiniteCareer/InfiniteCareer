@@ -213,6 +213,10 @@ div.events{
     align-items: center;
 }
 
+div.events.vertical{
+    flex-direction: column;
+}
+
 @media screen and (max-width: 600px){
     div.events{
         flex-direction: column;
@@ -262,4 +266,72 @@ img#header{
 
 p.bold{
     font-weight: bold;
+}
+
+div#thumbnail{
+    display: none
+}
+
+/* BLOG THUMBNAILS */
+
+article.blog{
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px black solid;
+    margin-top: 2vw;
+}
+
+article.blog img#header{
+    width: 25%;
+    height: auto;
+}
+
+article.blog h1{
+    font-size: 20px;
+}
+
+article.blog p{
+    line-height: 1.15;
+    margin-bottom: 1.5em;
+}
+
+article.blog a {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: small;
+    padding: 10px;
+    margin: none;
+}
+article.blog a:visited{
+    text-decoration: none;
+}
+article.blog a:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border: 3px var(--primary-color) solid;
+    text-decoration: none;
+}
+
+article.blog div{
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    article.blog{
+        flex-direction: column;
+    }
+    article.blog img#header{
+        width: 100%;
+        height: auto;
+    }
+    article.blog{
+        text-align: center;
+    }
 }
